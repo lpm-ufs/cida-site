@@ -16,6 +16,7 @@ import maquinacoordenadas from './assets/equipamentos/maquinacoordenadas.png'
 import martelo from './assets/equipamentos/martelo.png';
 import shaker from './assets/equipamentos/shaker.jpeg';
 import labview from './assets/equipamentos/labview.png';
+import camaraclimatica from './assets/equipamentos/camaraclimatica.jpeg';
 
 import fabricia from './assets/pessoal/fabricia.jpg';
 import daniel from './assets/pessoal/daniel.jpg';
@@ -310,6 +311,12 @@ export const equipamentosPT = [
     name: 'Shaker',
     description: 'Equipamento para testes de vibração e análise modal em estruturas e componentes mecânicos.'
   },
+  {
+    id: 1,
+    img: camaraclimatica,
+    name: 'Câmara Climática',
+    description: 'Câmara climática (temperatura e umidade) da marca ASLI, utilizada para ensaios ambientais controlados.'
+  },
 
   
 
@@ -377,6 +384,12 @@ export const equipamentosEN = [
   name: 'Instrumented Hammer',
   description: 'Used for structure excitation in modal analysis tests. It has an embedded force sensor to accurately measure impacts.',
 },
+{
+  id: 1,
+  img: camaraclimatica,
+  name: 'Climatic Chamber',
+  description: 'ASLI climate chamber (temperature and humidity), used for controlled environmental testing.',
+},
 
   {
     id: 2,
@@ -441,6 +454,12 @@ export const equipamentosFR = [
   img: martelo, // remplacez par le chemin réel ou l'import de l'image
   name: 'Marteau Instrumenté',
   description: 'Utilisé pour l’excitation des structures lors des tests d’analyse modale. Équipé d’un capteur de force intégré pour mesurer avec précision les impacts.',
+},
+{
+  id: 1,
+  img: camaraclimatica,
+  name: 'Chambre Climatique',
+  description: 'Chambre climatique ASLI (température et humidité), utilisée pour des essais environnementaux contrôlés.',
 },
 
   {
