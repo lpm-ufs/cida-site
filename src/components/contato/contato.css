@@ -3,13 +3,15 @@
 }
 
 .contact__container {
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 12px;
+  align-items: center;
   position: relative;
   z-index: 10;
 }
 
 .contact__card {
-  padding-left: 130px;
+  padding-left: 90px;
   margin-bottom: 40px;
   position: relative;
 }
@@ -94,11 +96,56 @@
 }
 
 .contato .home__img-wrapper {
-  max-width: 120px;
+  max-width: 220px;
   transform: translateY(0);
   display: grid;
   justify-items: center;
   row-gap: 10px;
+  justify-self: start;
+  margin-left: 0;
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .contato .home__img-wrapper {
+    justify-self: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contato .home__img-wrapper {
+    justify-self: center;
+    margin-inline: auto;
+  }
+
+  .contato .home__lattes-link {
+    text-align: center;
+  }
+
+  .contact__content {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .contact__card {
+    padding-left: 0;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact__card-icon {
+    position: static;
+    margin: 0 auto 10px;
+  }
+
+  .contact__card-icon::after {
+    display: none;
+  }
 }
 
 .contato .home__profile {
@@ -110,8 +157,8 @@
 }
 
 .contato .home__banner {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   padding-bottom: 0;
   border-radius: 50%;
 }
