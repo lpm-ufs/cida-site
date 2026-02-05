@@ -107,7 +107,8 @@
 
 @media (max-width: 900px) {
   .contact__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
     row-gap: 24px;
   }
 
@@ -118,6 +119,23 @@
 }
 
 @media (max-width: 600px) {
+  .contact__container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 16px;
+    align-items: start;
+  }
+
+  .contato .home__img-wrapper {
+    align-self: start;
+    max-width: 140px;
+  }
+
+  .contato .home__banner {
+    width: 140px;
+    height: 140px;
+  }
+
   .contato .home__img-wrapper {
     justify-self: center;
     margin-inline: auto;
@@ -129,18 +147,26 @@
 
   .contact__content {
     justify-items: center;
-    text-align: center;
+    text-align: justify;
+  }
+
+  .contact__card {
+    text-align: justify;
   }
 
   .contact__card {
     padding-left: 0;
     width: 100%;
     max-width: 320px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    column-gap: 12px;
+    align-items: center;
   }
 
   .contact__card-icon {
     position: static;
-    margin: 0 auto 10px;
+    margin: 0;
   }
 
   .contact__card-icon::after {
