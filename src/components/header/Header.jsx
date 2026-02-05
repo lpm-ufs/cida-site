@@ -22,6 +22,7 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [scrollNav, setScrollNav] = useState(false);
     const [theme, setTheme] = useState(getStorageTheme()); 
+    const [langOpen, setLangOpen] = useState(false);
 
     // Seleciona os links de navegação conforme o idioma atual
     const linksData = i18n.language === 'fr' ? linksFR
@@ -84,12 +85,16 @@ const Header = () => {
         }
     };
 
+    const getFlagSrc = () => {
+        if (i18n.language === 'en') return usa;
+        if (i18n.language === 'fr') return france;
+        return brazil;
+    };
+
     return (
         <header className={`${scrollNav ? 'scroll-header' : ''} header`}>
             <nav className="nav">
-                <Link to='/' onClick={scrollTop} className="nav__logo text-cs">
-                    LPM
-                </Link>
+                <Link to='/' onClick={scrollTop} className="nav__logo text-cs" aria-label="Topo" />
 
                 <div className={`${showMenu ? 'nav__menu show-menu' : 'nav__menu'}`}>
                     <div className="nav__data">
@@ -127,13 +132,49 @@ const Header = () => {
                 </div>
 
                 <div className="nav__btns">
-                    <div className="language__flags">
-                        {renderFlags()}
+                    <div className="language__dropdown">
+                        <button
+                            type="button"
+                            className="language__button"
+                            onClick={() => setLangOpen(!langOpen)}
+                            aria-expanded={langOpen}
+                            aria-label="Selecionar idioma"
+                        >
+                            <img src={getFlagSrc()} alt="" className="flag" />
+                            <span className={`language__chevron ${langOpen ? 'is-open' : ''}`} />
+                        </button>
+
+                        {langOpen && (
+                            <div className="language__menu">
+                                {i18n.language !== 'pt' && (
+                                    <button type="button" onClick={() => { changeLanguage('pt'); setLangOpen(false); }}>
+                                        <img src={brazil} alt="PortuguÃªs" className="flag" />
+                                        <span>{'Portugu\u00EAs'}</span>
+                                    </button>
+                                )}
+                                {i18n.language !== 'en' && (
+                                    <button type="button" onClick={() => { changeLanguage('en'); setLangOpen(false); }}>
+                                        <img src={usa} alt="InglÃªs" className="flag" />
+                                        <span>English</span>
+                                    </button>
+                                )}
+                                {i18n.language !== 'fr' && (
+                                    <button type="button" onClick={() => { changeLanguage('fr'); setLangOpen(false); }}>
+                                        <img src={france} alt="FranÃ§a" className="flag" />
+                                        <span>{'Fran\u00E7ais'}</span>
+                                    </button>
+                                )}
+                            </div>
+                        )}
                     </div>
 
-                    <div className="theme__toggler" onClick={toggleTheme}>
-                        {theme === 'light-theme' ? <BsMoon /> : <BsSun />}
-                    </div>
+                    <button type="button" className="theme__toggler" onClick={toggleTheme} aria-label="Alternar tema">
+                        <span className={`theme__pill ${theme === 'light-theme' ? 'is-light' : 'is-dark'}`}>
+                            <span className="theme__icon">
+                                {theme === 'light-theme' ? <BsSun /> : <BsMoon />}
+                            </span>
+                        </span>
+                    </button>
 
                     <div
                         className={`${showMenu ? 'nav__toggle animate-toggle' : 'nav__toggle'}`}

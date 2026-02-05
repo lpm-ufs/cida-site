@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { equipamentosPT, equipamentosEN, equipamentosFR } from '../../Data';
 import shapeOne from '../../assets/shape-1.png';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 import { useTranslation } from 'react-i18next';
-import "swiper/css";
-import "swiper/css/navigation";
 import './equipamentos.css';
 
 const Equipamentos = () => {
@@ -23,21 +19,11 @@ const Equipamentos = () => {
             <p className="section__subtitle">
             </p>
 
-            <Swiper
-                spaceBetween={30}
-                navigation={true}
-                breakpoints={{
-                    540: { slidesPerView: 1, spaceBetween: 30 },
-                    768: { slidesPerView: 2, spaceBetween: 30 },
-                    1200: { slidesPerView: 3, spaceBetween: 40 },
-                }}
-                modules={[Navigation]}
-                className="services__container container mySwiper"
-            >
+            <div className="services__container container equipamentos__grid">
                 {
                     data.map(({ img, name, description }, index) => {
                         return (
-                            <SwiperSlide className="services__item card card-one" key={index}>
+                            <article className="services__item card card-one" key={index}>
                                 <button
                                     type="button"
                                     className="equipamentos__img-button"
@@ -48,11 +34,11 @@ const Equipamentos = () => {
                                 </button>
                                 <span className="services__subtitle text-cs">{name}</span>
                                 <p className="services__description">{description}</p>
-                            </SwiperSlide>
+                            </article>
                         )
                     })
                 }
-            </Swiper>
+            </div>
 
             {zoomedImg && (
                 <div
