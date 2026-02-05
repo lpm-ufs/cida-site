@@ -4,13 +4,13 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --primary-color:#ff3d00;
-  --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 92%);
-  --bg-color: hsl(216, 18%, 16%);
-  --bg-color-alt: hsl(213, 10%, 21%);
-  --container-color: hsl(217, 18%, 14%);
-  --border-color: hsl(210, 2%, 65%);
+  --primary-color: #f26a2e;
+  --title-color: #1f1e1b;
+  --text-color: #403a34;
+  --bg-color: #f7f4ee;
+  --bg-color-alt: #ffffff;
+  --container-color: #ffffff;
+  --border-color: #d8cfc6;
   --first-gradient: linear-gradient(
     0deg,
     var(--bg-color-alt) 0%,
@@ -46,7 +46,7 @@
   --tiny-font-size: 13px;
 
   /* Shadow */
-  --shadow: 5px 5px rgb(255 255 255 / 10%);
+  --shadow: 6px 10px rgb(0 0 0 / 10%);
 
   /* Transition */
   --transition: cubic-bezier(0.3, 0, 0.3, 1);
@@ -54,15 +54,29 @@
 
 /* Light Theme */
 .light-theme {
-  --title-color: #000;
-  --text-color: #262626;
-  --bg-color: #f0ebe3;
-  --bg-color-alt: #fff;
-  --container-color: #fff;
-  --border-color: #000;
+  --title-color: #1f1e1b;
+  --text-color: #403a34;
+  --bg-color: #f9f6f1;
+  --bg-color-alt: #ffffff;
+  --container-color: #ffffff;
+  --border-color: #d8cfc6;
 
   /* Shadow */
-  --shadow: 5px 5px rgb(0 0 0 / 20%);
+  --shadow: 6px 10px rgb(0 0 0 / 10%);
+}
+
+/* Dark Theme */
+.dark-theme {
+  --primary-color: #f26a2e;
+  --title-color: #f7f3ed;
+  --text-color: #d9cfc4;
+  --bg-color: #1a1714;
+  --bg-color-alt: #22201d;
+  --container-color: #1f1c19;
+  --border-color: #6a5f52;
+
+  /* Shadow */
+  --shadow: 6px 10px rgb(0 0 0 / 30%);
 }
 
 .light-theme .skills__bar {
@@ -223,6 +237,37 @@ img {
   position: relative;
 }
 
+/* Section divider */
+.section:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 78px;
+  transform: translateX(-50%);
+  width: min(560px, 82vw);
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-color),
+    transparent
+  );
+  opacity: 0.8;
+}
+
+.section:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 71px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
 .section__title,
 .section__subtitle {
   text-align: center;
@@ -360,3 +405,5 @@ img {
   line-height: 1px;
   color: rgba(255, 255, 255, 0.02);
 }
+
+
