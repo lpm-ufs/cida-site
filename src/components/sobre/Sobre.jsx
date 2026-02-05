@@ -39,9 +39,6 @@ const Sobre = () => {
                             </span>
                         </p>
 
-                        <img src={shapeOne} alt="" className="shape shape__1" />
-                        <img src={shapeTwo} alt="" className="shape shape__2" />
-                        <img src={shapeTwo} alt="" className="shape shape__3" />
                     </div>
 
                     <p className="home__text">

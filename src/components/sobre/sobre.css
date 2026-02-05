@@ -55,7 +55,7 @@
 .home__text {
   font-size: var(--base-font-size);
   margin-block: 28px 26px; /* margin top 40px and bottom 28px */
-  max-width: 620px;
+  max-width: 680px;
   line-height: 1.8;
   text-align: justify;
 }
@@ -260,10 +260,10 @@
 }
 
 .shape__1 {
-  width: 226px;
-  height: 226px;
+  width: 260px;
+  height: 260px;
   top: -6%;
-  right: 6%;
+  left: -6%;
 }
 
 .shape__2,
