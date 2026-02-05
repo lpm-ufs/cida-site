@@ -20,8 +20,8 @@ i18n
           contactAddressData: "Avenida Marechal Rondon Jardim s/n - Rosa Elze, São Cristóvão - SE, 49100-000",
           contactEmailTitle: "Email",
           contactEmailData: "alexandre.ramos@academico.ufs.br",
-          contactExtensionTitle: "Ramal",
-          contactExtensionData: "6315",
+          contactExtensionTitle: "Telefone",
+          contactExtensionData: "(79) 3194-7680 ou (79) 3194-7681",
           contactName: "Alexandre Carlos Rodrigues Ramos",
           contactBio: "Doutorado em Engenharia Mecânica pela EESC-USP, Mestrado em Engenharia Mecânica pelo ITA, e graduação em Engenharia Mecatrônica pela EESC-USP.",
 
@@ -47,8 +47,8 @@ i18n
           contactAddressData: "Avenida Marechal Rondon Jardim s/n - Rosa Elze, São Cristóvão - SE, 49100-000",
           contactEmailTitle: "Email",
           contactEmailData: "alexandre.ramos@academico.ufs.br",
-          contactExtensionTitle: "Extension",
-          contactExtensionData: "6315",
+          contactExtensionTitle: "Phone",
+          contactExtensionData: "(79) 3194-7680 ou (79) 3194-7681",
           contactName: "Alexandre Carlos Rodrigues Ramos",
           contactBio: "PhD in Mechanical Engineering from EESC-USP, Master's in Mechanical Engineering from ITA, and a degree in Mechatronic Engineering from EESC-USP.",
           studentsTitle: "Students",
@@ -73,8 +73,8 @@ i18n
           contactAddressData: "Avenida Marechal Rondon Jardim s/n - Rosa Elze, São Cristóvão - SE, 49100-000",
           contactEmailTitle: "Email",
           contactEmailData: "alexandre.ramos@academico.ufs.br",
-          contactExtensionTitle: "Poste",
-          contactExtensionData: "6315",
+          contactExtensionTitle: "Telephone",
+          contactExtensionData: "(79) 3194-7680 ou (79) 3194-7681",
           contactName: "Alexandre Carlos Rodrigues Ramos",
           contactBio: "Doctorat en génie mécanique de l'EESC-USP, maîtrise en génie mécanique de l'ITA et diplôme en génie mécatronique de l'EESC-USP.",
 
@@ -97,6 +97,8 @@ i18n
   });
 
 export default i18n;
+
+
 
 
 
