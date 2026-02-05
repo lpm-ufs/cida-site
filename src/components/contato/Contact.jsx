@@ -49,18 +49,14 @@ const Contact = () => {
                     <div className=" home__banner">
                         <img src={profileImg} alt="" className='home__profile' />
                     </div>
-
-                    <p className="home__data home__data-one">
-                        <span className="text-sm2 text-cs">
-                            {t('contactName')}
-                        </span>
-                    </p>
-
-                    <p className="maior home__data home__data-two">
-                        <span className="text-sm3 text-cs">
-                            {t('contactBio')}
-                        </span>
-                    </p>
+                    <a
+                        className="home__lattes-link"
+                        href="https://lattes.cnpq.br/0000000000000000"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Currículo Lattes
+                    </a>
                 </div>
             </div>
 

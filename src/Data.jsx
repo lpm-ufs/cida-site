@@ -14,6 +14,7 @@ import arduino from './assets/equipamentos/arduino.png';
 import geradorfuncoes from './assets/equipamentos/geradorfuncoes.png';
 import maquinacoordenadas from './assets/equipamentos/maquinacoordenadas.png'
 import martelo from './assets/equipamentos/martelo.png';
+import shaker from './assets/equipamentos/shaker.jpeg';
 import labview from './assets/equipamentos/labview.png';
 
 import fabricia from './assets/pessoal/fabricia.jpg';
@@ -302,6 +303,15 @@ export const equipamentosPT = [
     name: 'Martelo Instrumentado',
     description: 'Utilizado para excitação de estruturas em testes de análise modal. Possui sensor de força embutido para medir impactos com precisão.',
   },
+
+  {
+    id: 1,
+    img: shaker,
+    name: 'Shaker',
+    description: 'Equipamento para testes de vibração e análise modal em estruturas e componentes mecânicos.'
+  },
+
+  
 
   {
     id: 2,
