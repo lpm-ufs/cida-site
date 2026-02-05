@@ -20,7 +20,6 @@ function App() {
       <Header />
       <Sobre />
       <Projetos />
-      <Publicacoes />
       <Equipamentos />
       <Contact />
       <Footer />
