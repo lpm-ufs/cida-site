@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { equipamentosPT, equipamentosEN, equipamentosFR } from '../../Data';
 import shapeOne from '../../assets/shape-1.png';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +10,7 @@ import './equipamentos.css';
 
 const Equipamentos = () => {
     const { t, i18n } = useTranslation(); // Inicializa o hook de tradução
+    const [zoomedImg, setZoomedImg] = useState(null);
 
     const data = i18n.language === 'fr' ? equipamentosFR 
                 : i18n.language === 'en' ? equipamentosEN 
@@ -37,7 +38,14 @@ const Equipamentos = () => {
                     data.map(({ img, name, description }, index) => {
                         return (
                             <SwiperSlide className="services__item card card-one" key={index}>
-                                <img src={img} alt="" className="testimonial__img" />
+                                <button
+                                    type="button"
+                                    className="equipamentos__img-button"
+                                    onClick={() => setZoomedImg({ src: img, alt: name })}
+                                    aria-label={`Abrir imagem de ${name}`}
+                                >
+                                    <img src={img} alt={name} className="testimonial__img" />
+                                </button>
                                 <span className="services__subtitle text-cs">{name}</span>
                                 <p className="services__description">{description}</p>
                             </SwiperSlide>
@@ -45,6 +53,27 @@ const Equipamentos = () => {
                     })
                 }
             </Swiper>
+
+            {zoomedImg && (
+                <div
+                    className="equipamentos__lightbox"
+                    role="dialog"
+                    aria-modal="true"
+                    onClick={() => setZoomedImg(null)}
+                >
+                    <div className="equipamentos__lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={zoomedImg.src} alt={zoomedImg.alt} />
+                        <button
+                            type="button"
+                            className="equipamentos__lightbox-close"
+                            onClick={() => setZoomedImg(null)}
+                            aria-label="Fechar imagem"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+            )}
 
             <div className="section__deco deco__right">
                 <img src={shapeOne} alt="" className='shape' />

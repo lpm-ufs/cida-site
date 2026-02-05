@@ -51,7 +51,7 @@ const Contact = () => {
                     </div>
                     <a
                         className="home__lattes-link"
-                        href="https://lattes.cnpq.br/0000000000000000"
+                        href="http://lattes.cnpq.br/7608245605008722"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
