@@ -326,12 +326,6 @@ export const equipamentosPT = [
     description: 'Transmissores LoRaWAN e Gateways 915 MHz para comunicação de longa distância em redes IoT.'
   },
   {
-    id: 3,
-    img: arduino,
-    name: 'Sistemas Eletrônicos Básicos',
-    description: 'Placas de desenvolvimento como ESP32, Arduino e Raspberry Pi para prototipagem e desenvolvimento de projetos eletrônicos.'
-  },
-  {
     id: 4,
     img: drone,
     name: 'Drones',
@@ -392,12 +386,6 @@ export const equipamentosEN = [
     description: 'LoRaWAN transmitters and 915 MHz gateways for long-range communication in IoT networks.'
   },
   {
-    id: 3,
-    img: arduino,
-    name: 'Basic Electronic Systems',
-    description: 'Development boards such as ESP32, Arduino, and Raspberry Pi for prototyping and electronic project development.'
-  },
-  {
     id: 4,
     img: drone,
     name: 'Drones',
@@ -456,12 +444,6 @@ export const equipamentosFR = [
     img: lorawan,
     name: 'Communication et IoT',
     description: 'Émetteurs LoRaWAN et passerelles 915 MHz pour la communication longue portée dans les réseaux IoT.'
-  },
-  {
-    id: 3,
-    img: arduino,
-    name: 'Systèmes Électroniques de Base',
-    description: 'Cartes de développement comme ESP32, Arduino et Raspberry Pi pour le prototypage et le développement de projets électroniques.'
   },
   {
     id: 4,
