@@ -16,8 +16,7 @@ const Equipamentos = () => {
         <section className="equipamentos section" id="equipamentos">
             <h2 className="section__title text-cs">{t('equipmentsTitle')}</h2>
 
-            <p className="section__subtitle">
-            </p>
+            <p className="section__subtitle"></p>
 
             <div className="services__container container equipamentos__grid">
                 {

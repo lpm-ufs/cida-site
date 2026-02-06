@@ -11,7 +11,6 @@ import osciloscopio from './assets/equipamentos/osciloscopio.png';
 import computador from './assets/equipamentos/computador.png';
 import lorawan from './assets/equipamentos/lorawan.png';
 import arduino from './assets/equipamentos/arduino.png';
-import geradorfuncoes from './assets/equipamentos/geradorfuncoes.png';
 import maquinacoordenadas from './assets/equipamentos/maquinacoordenadas.png'
 import martelo from './assets/equipamentos/martelo.png';
 import shaker from './assets/equipamentos/shaker.jpeg';
@@ -356,12 +355,7 @@ export const equipamentosPT = [
     name: 'Máquinas de Medir Coordenadas',
     description: 'Máquinas de medir coordenadas, braços articulados e scanners para medições precisas em engenharia e fabricação.'
   },
-  {
-    id: 8,
-    img: geradorfuncoes,
-    name: 'Gerador de Funções',
-    description: 'Dispositivo para gerar sinais elétricos de diferentes formas de onda, usado em testes e desenvolvimento de circuitos eletrônicos.'
-  }
+  
 ];
 
 
@@ -427,12 +421,7 @@ export const equipamentosEN = [
     name: 'Coordinate Measuring Machines',
     description: 'Coordinate measuring machines, articulated arms, and scanners for precise measurements in engineering and manufacturing.'
   },
-  {
-    id: 8,
-    img: geradorfuncoes,
-    name: 'Function Generator',
-    description: 'Device for generating electrical signals of different waveforms, used in testing and circuit development.'
-  }
+  
 ];
 
 
@@ -498,12 +487,7 @@ export const equipamentosFR = [
     name: 'Machines à Mesurer les Coordonnées',
     description: 'Machines à mesurer les coordonnées, bras articulés et scanners pour des mesures précises en ingénierie et fabrication.'
   },
-  {
-    id: 8,
-    img: geradorfuncoes,
-    name: 'Générateur de Fonctions',
-    description: 'Dispositif pour générer des signaux électriques de différentes formes d’onde, utilisé pour les tests et le développement de circuits.'
-  }
+  
 ];
 
 

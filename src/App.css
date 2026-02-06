@@ -279,9 +279,12 @@ img {
 
 .section__subtitle {
   color: var(--primary-color);
-  font-size: var(--smaller-font-size);
+  font-size: var(--normal-font-size);
   text-transform: uppercase;
   font-weight: 700;
+  line-height: 1.45;
+  max-width: 820px;
+  margin-inline: auto;
   margin-bottom: 60px;
 }
 
